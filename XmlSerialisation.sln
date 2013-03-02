@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LbF.XmlSerialisation", "XmlSerialisation\LbF.XmlSerialisation.csproj", "{CC6FC2A3-8FB0-40B7-940D-09AB4D28AF3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleSerialisation", "ExampleSerialisation\ExampleSerialisation.csproj", "{8E8B60BE-1059-40DE-AC3B-37A70147BDD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC6FC2A3-8FB0-40B7-940D-09AB4D28AF3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6FC2A3-8FB0-40B7-940D-09AB4D28AF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6FC2A3-8FB0-40B7-940D-09AB4D28AF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6FC2A3-8FB0-40B7-940D-09AB4D28AF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E8B60BE-1059-40DE-AC3B-37A70147BDD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E8B60BE-1059-40DE-AC3B-37A70147BDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E8B60BE-1059-40DE-AC3B-37A70147BDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E8B60BE-1059-40DE-AC3B-37A70147BDD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

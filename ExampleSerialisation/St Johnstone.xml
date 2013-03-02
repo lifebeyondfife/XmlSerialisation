@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FootballClub Version="1.0" TeamName="St Johnstone FC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Stadium Name="McDiarmid Park" Capacity="10673" Opened="1989-08-19">
+		<Stands>
+			<Stand>Ormond Stand</Stand>
+			<Stand>Main Stand</Stand>
+		</Stands>
+	</Stadium>
+	<Manager Name="Steve Lomas" Age="39" Nationality="Northern Ireland" />
+	<Players>
+		<Player Name="Alan Mannus" Number="1" Nationality="Northern Ireland" Position="GK" />
+		<Player Name="Dave Mackay" Number="2" Nationality="Scotland" Position="DF" />
+		<Player Name="Callum Davidson" Number="3" Nationality="Scotland" Position="DF" />
+		<Player Name="Patrick Cregg" Number="4" Nationality="Republic of Ireland" Position="MF" />
+		<Player Name="Frazer Wright" Number="5" Nationality="Scotland" Position="DF" />
+		<Player Name="Steven Anderson" Number="6" Nationality="Scotland" Position="DF" />
+		<Player Name="Chris Millar" Number="7" Nationality="Scotland" Position="MF" />
+		<Player Name="Murray Davidson" Number="8" Nationality="Scotland" Position="MF" />
+		<Player Name="Grégory Tadé" Number="9" Nationality="France" Position="FW" />
+		<Player Name="Liam Craig" Number="10" Nationality="Scotland" Position="MF" />
+		<Player Name="Nigel Hasselbaink" Number="11" Nationality="Netherlands" Position="FW" />
+	</Players>
+</FootballClub>

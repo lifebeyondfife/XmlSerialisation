@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FootballClub" xmlns:sv="http://lifebeyondfife.com/FootballClub.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="FootballClub">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Stadium" type="Stadium" minOccurs="1" maxOccurs="1" />
+				<xs:element name="Manager" type="Manager" minOccurs="1" maxOccurs="1" />
+				<xs:element name="Players" type="Players" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+			<xs:attribute name="TeamName" type="xs:string" use="required" />
+			<xs:attribute name="Version" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Players">
+		<xs:sequence>
+			<xs:element name="Player" type="Player" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Player">
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<xs:attribute name="Number" type="xs:unsignedByte" use="optional" />
+		<xs:attribute name="Nationality" type="xs:string" use="required" />
+		<xs:attribute name="Position" type="xs:string" use="required" />
+	</xs:complexType>
+	
+	<xs:complexType name="Manager">
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<xs:attribute name="Age" type="xs:unsignedByte" use="optional" />
+		<xs:attribute name="Nationality" type="xs:string" use="required" />
+	</xs:complexType>
+	
+	<xs:complexType name="Stadium">
+		<xs:sequence>
+			<xs:element name="Stands" type="Stands" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<xs:attribute name="Capacity" type="xs:unsignedInt" use="required" />
+		<xs:attribute name="Opened" type="xs:date" use="required" />
+	</xs:complexType>
+	
+	<xs:complexType name="Stands">
+		<xs:sequence>
+			<xs:element name="Stand" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
