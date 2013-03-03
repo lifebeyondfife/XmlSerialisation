@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Schema;
-using System.Xml.Serialization;
-using LbF.XmlSerialisation;
 using NUnit.Framework;
+using LbF.XmlSerialisation;
 
 namespace ExampleSerialisation
 {
@@ -12,7 +11,6 @@ namespace ExampleSerialisation
 	{
 		private const string XmlFile = @"..\..\St Johnstone.xml";
 		private const string XmlSchemaFile = @"..\..\FootballClub.xsd";
-		private const string XmlRootNode = "FootballClub";
 
 		public static void Main(string[] args)
 		{
@@ -21,7 +19,7 @@ namespace ExampleSerialisation
 
 			var xmlHelper = new XmlSerialisationHelper<FootballClub>();
 
-			var stJohnstone = xmlHelper.Deserialise(XmlFile, new XmlRootAttribute { ElementName = XmlRootNode, IsNullable = true });
+			var stJohnstone = xmlHelper.Deserialise(XmlFile);
 
 			Console.WriteLine("Team Name:\t\t{0}", stJohnstone.Name);
 			Console.WriteLine("Manager Name:\t\t{0}", stJohnstone.Manager.Name);

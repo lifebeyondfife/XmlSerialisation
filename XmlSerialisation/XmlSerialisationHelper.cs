@@ -19,10 +19,10 @@ namespace LbF.XmlSerialisation
 		public static bool IsValidXml(string xmlFileUrl, string xmlSchemaFile)
 		{
 			IList<Tuple<object, XmlSchemaException>> _;
-			
+
 			return IsValidXml(xmlFileUrl, xmlSchemaFile, out _);
 		}
-		
+
 		/// <summary>
 		///	Validates an XML file against a given XSD schema with validation error messages.
 		/// </summary>
@@ -95,6 +95,37 @@ namespace LbF.XmlSerialisation
 
 		/// <summary>
 		/// Deserialises an XML file representation of object of type <see cref="T"/>.
+		/// </summary>
+		/// <param name="xmlFileUrl">The file location of the XML data to deserialise.</param>
+		/// <returns>Deserialised object of type <see cref="T"/>.</returns>
+		public T Deserialise(string xmlFileUrl)
+		{
+			var xmlRootAttribute = new XmlRootAttribute();
+
+			try
+			{
+				var xmlDoc = new XmlDocument();
+				xmlDoc.Load(xmlFileUrl);
+
+				if (xmlDoc.DocumentElement == null)
+					return default(T);
+				
+				xmlRootAttribute.ElementName = xmlDoc.DocumentElement.Name;
+			}
+			catch (IOException)
+			{
+				return default(T);
+			}
+
+			using (TextReader textReader = new StreamReader(xmlFileUrl))
+			{
+				var deserializer = new XmlSerializer(SerialiseType, xmlRootAttribute);
+				return (T) deserializer.Deserialize(textReader);
+			}
+		}
+
+		/// <summary>
+		/// Deserialises a node representation in an XML file of object of type <see cref="T"/>.
 		/// </summary>
 		/// <param name="xmlFileUrl">The file location of the XML data to deserialise.</param>
 		/// <param name="xmlRootAttribute">The name of the root XML node.</param>
